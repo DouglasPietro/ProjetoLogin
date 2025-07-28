@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quem Somos - coNexa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0; 
+            padding: 0;
+            background: #f7f9fc;
+            color: #333;
+        }
+        header {
+            background-color: #004a99; /* azul coNexa */
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        header img {
+            max-height: 60px;
+        }
+        .btn-voltar {
+            background-color: #ffc107; /* amarelo */
+            color: #004a99;
+            border: none;
+            padding: 10px 16px;
+            font-weight: bold;
+            font-size: 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .btn-voltar:hover {
+            background-color: #e0a800;
+        }
+        .user-info {
+            color: white;
+            margin-right: 20px;
+        }
+        .user-info a {
+            color: #ffc107;
+            text-decoration: none;
+        }
+        .user-info a:hover {
+            text-decoration: underline;
+        }
+        main {
+            display: flex;
+            max-width: 1200px;
+            margin: 40px auto;
+            gap: 30px;
+            padding: 0 20px;
+        }
+        section.texto-central {
+            flex: 2;
+            text-align: center;
+        }
+        section.texto-central h1 {
+            color: #004a99;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+        section.texto-central p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            margin-top: 0;
+        }
+        aside.lateral {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        .quadro {
+            background: #e3f2fd; /* azul claro suave */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+        }
+        .quadro h3 {
+            margin-top: 0;
+            color: #004a99;
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+        .quadro ul {
+            padding-left: 20px;
+        }
+        .quadro ul li {
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #004a99;
+            color: white;
+            margin-top: 60px;
+            font-weight: bold;
+        }
+        @media (max-width: 900px) {
+            main {
+                flex-direction: column;
+                margin: 20px;
+            }
+            aside.lateral {
+                flex-direction: row;
+                overflow-x: auto;
+            }
+            .quadro {
+                min-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo coNexa">
+    {% if usuario %}
+    <div class="user-info">
+        Olá, {{ usuario }}! | <a href="{{ url_for('logout') }}">Sair</a>
+    </div>
+    {% else %}
+    <div>
+        <a href="{{ url_for('login') }}" class="btn-voltar">Login</a>
+    </div>
+    {% endif %}
+</header>
+
+<main>
+    <section class="texto-central">
+        <h1>Quem Somos</h1>
+        <p>
+            A <strong>coNexa</strong> é uma plataforma inovadora que conecta prestadores de serviços e produtores locais
+            a clientes de forma simples, rápida e eficiente. Nosso objetivo é fortalecer a economia regional
+            facilitando o acesso a serviços, produtos rurais, artesanato, suporte técnico e muito mais.
+        </p>
+        <p>
+            Com uma interface intuitiva e moderna, oferecemos ferramentas para anúncios, agendamento online,
+            divulgação e suporte personalizado, ajudando você a crescer e se destacar no mercado.
+        </p>
+        <p>
+            Seja você um empreendedor, produtor rural ou consumidor, a coNexa foi feita para facilitar a sua vida,
+            aproximando quem oferece e quem precisa de serviços e produtos de qualidade.
+        </p>
+    </section>
+
+    <aside class="lateral">
+        <div class="quadro">
+            <h3>O que oferecemos</h3>
+            <ul>
+                <li>Anúncios de serviços e produtos</li>
+                <li>Agendamento online integrado</li>
+                <li>Suporte técnico especializado</li>
+                <li>Criação de identidade visual</li>
+                <li>Divulgação e marketing digital</li>
+                <li>Espaço para produtores rurais e artesãos</li>
+            </ul>
+        </div>
+
+        <div class="quadro">
+            <h3>Benefícios para você</h3>
+            <ul>
+                <li>Fácil cadastro e uso intuitivo</li>
+                <li>Maior visibilidade para seu negócio</li>
+                <li>Conexão direta com clientes locais</li>
+                <li>Suporte dedicado e atendimento personalizado</li>
+                <li>Plataforma segura e confiável</li>
+                <li>Ferramentas para impulsionar suas vendas</li>
+            </ul>
+        </div>
+        <a href="{{ url_for('index') }}" class="btn-voltar">Voltar ao Início</a>
+    </aside>
+</main>
+
+<footer>
+    Conectando você ao futuro dos serviços, simples e eficiente.
+</footer>
+
+</body>
+</html>

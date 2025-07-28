@@ -1,0 +1,7 @@
+{
+  "mirian": "mirian.jpeg",
+  "terapeuta": "terapeuta.webp",
+  "academia": "Academia.webp",
+  "fisio": "fisio.jpg",
+  "pilates": "pilates.jpg"
+}

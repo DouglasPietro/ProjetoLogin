@@ -1,0 +1,127 @@
+[12:44, 11/06/2025] ChatGPT: <html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro - coNexa</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f9ff;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #005b96;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #005b96;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 15px;
+    }
+
+    input, select {
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #005b96;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+[12:44, 11/06/2025] ChatGPT: button:hover {
+      background-color: #003f6b;
+    }
+
+    .qr-section {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .qr-section img {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .back-link {
+      display: block;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .back-link a {
+      color: #005b96;
+      text-decoration: none;
+    }
+
+    .back-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><span style="color:white;">c</span><span style="color:yellow;">o</span><span style="text-transform: uppercase;">Nexa</span></h1>
+  </header>
+
+  <div class="container">
+    <h2>Cadastro</h2>
+    <form>
+      <label for="nome">Nome completo:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" required>
+
+      <label for="plano">Escolha o plano:</label>
+      <select id="plano" name="plano">
+        <option value="gratuito">Gratuito</option>
+        <option value="premium">Premium - R49,90</option>
+        <option value="completo">Completo com identidade visual - R99,90</option>
+      </select>
+ <div class="qr-section">
+        <label>Pagamento via Pix:</label>
+        <p>Escaneie o QR Code abaixo após escolher um plano pago:</p>
+        <img src="qrcodepix.png" alt="QR Code Pix">
+      </div>
+
+      <button type="submit">Finalizar Cadastro</button>
+    </form>
+
+    <div class="back-link">
+      <a href="index.html">← Voltar à página inicial</a>
+    </div>
+  </div>
+</body>
+</html>

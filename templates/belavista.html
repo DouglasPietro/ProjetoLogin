@@ -1,0 +1,393 @@
+ <html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>coNexa</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    color: #333;
+  }
+
+  header {
+    background-color: #005f99;
+    padding: 25px 10px;
+    text-align: center;
+    color: white;
+    position: relative;
+  }
+
+  header h1 {
+    font-size: 54px;
+    margin: 0;
+    font-weight: 900;
+    user-select: none;
+  }
+
+  header h1 .o {
+    color: #ffcc00;
+  }
+
+  header p {
+    margin: 10px 0 0 0;
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+  nav {
+    margin: 20px auto 10px auto;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    border: none;
+    color: white;
+    width: 110px;
+    height: 110px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+: box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+
+  .btn.quemsomos {
+    background-color: #e63946;
+  }
+  .btn.quemsomos:hover {
+    background-color: #b83238;
+  }
+
+  .btn.cadastro {
+    background-color: #457b9d;
+  }
+  .btn.cadastro:hover {
+    background-color: #35607a;
+  }
+
+  .btn.login {
+    background-color: #2a9d8f;
+  }
+  .btn.login:hover {
+    background-color: #1f746a;
+  }
+
+  .btn.contato {
+    background-color: #000;
+  }
+  .btn.contato:hover {
+    background-color: #222;
+  }
+
+  /* Espaço para imagem abaixo dos botões */
+  .img-espaco {
+    width: 100%;
+    max-width: 900px;
+    height: 220px;
+    margin: 20px auto 40px auto;
+    border: 3px dashed #bbb;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #aaa;
+    font-size: 18px;
+    font-style: italic;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .quadros {
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+
+
+
+</style>
+</head>
+<body>
+
+<header>
+
+  <h1>c<span class="o">o</span>Nexa</h1>
+  
+  <p>Bem-vindo ao futuro dos serviços — a plataforma que conecta você às melhores oportunidades</p>
+</header>
+
+
+<script>
+  function redirectToCity() {
+    var selectedCity = document.getElementById("citySelect").value;
+    window.location.href = selectedCity;
+  }
+</script>
+
+<nav>
+ <html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    .btn-container {
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 6px 20px;
+      margin: 4px;
+      font-size: 12px;
+      font-weight: 500;
+      border-radius: 4px;
+      text-decoration: none;
+      color: white;
+      transition: 0.3s ease;
+      height: 30px;
+      line-height: 30px;
+    }
+
+    .btn-quem-somos { background-color: #3a6ea5; }
+    .btn-login { background-color: #5c5c5c; }
+    .btn-contato { background-color: #f4c430; color: #222; }
+    .btn-cadastro-usuario { background-color: #2a9d8f; }
+    .btn-cadastro-prestador { background-color: #264653; }
+    .btn-instagram { background-color: #6e44ff; }
+	 
+
+    .btn:hover {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="btn-container">
+    <a href="quemsomos.html" class="btn btn-quem-somos">Quem Somos</a>
+    <a href="login.html" class="btn btn-login">Login</a>
+<a href="contato.html" class="btn btn-contato">Contato</a>
+    <a href="cadastrousuario.html" class="btn btn-cadastro-usuario">Cadastro Usuário</a>
+    <a href="cadastroprestador.html" class="btn btn-cadastro-prestador">Cadastro Prestador</a>
+    <a href="https://www.instagram.com/coonexa_?igsh=MWQweTY5emY0Z295cA==" target="_blank" class="btn btn-instagram">Instagram</a>
+	
+	
+  </div>
+
+</body>
+</html>
+</div>
+</div>
+<div>
+
+
+<style>
+  #carouselContainer {
+    width: 750px;
+    height: 190px;
+    margin: 0px auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 12px rgba(0,0,0,0.2);
+    background: #fff;
+  }
+  #carouselSlide {
+    display: flex;
+    width: calc(700px * 3);
+    animation: slide 20s infinite;
+	
+  }
+  #carouselSlide a {
+    flex: 0 0 700px;
+    height: 200px;
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-right: 10px;
+  }
+  #carouselSlide a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @keyframes slide {
+    0%   { transform: translateX(0); }
+    53%  { transform: translateX(-700px); }
+    76%  { transform: translateX(-1400px); }
+    90% { transform: translateX(0); }
+  }
+</style>
+
+<div id="carouselContainer">
+  <div id="carouselSlide">
+    <a href="https://www.b2cstore.com.br?parceiro=40346" target="_blank"><img src="yba.jpeg" alt="Anúncio 1"></a>
+	   <a href="cadastroprestador.html" target="_blank"><img src="teste.jpeg" alt="Anúncio 3"></a>
+    <a href="ttps://www.instagram.com/alexandrecarvalho_fotografo==" target="_blank"><img src="d.jpeg" alt="Anúncio 2"></a>
+    
+	 
+	 
+  </div>
+
+</style>
+</div>
+<div class="highlight-title">
+ <!-- Título em destaque -->
+<div style="text-align: center; margin-top: 30px;">
+  <div style="display: inline-block; background-color: #e6f0ff; border: 2px solid #003366; padding: 20px 80px; border-radius: 10px; min-width: 400px;">
+    <h2 style="color: #003366; font-size: 28px; font-weight: bold; margin: 0;">Destaques</h2>
+  </div>
+</div>
+<style>
+  .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 20px; /* Espaço entre colunas */
+    row-gap: 40px;    /* Espaço entre linhas */
+    margin: 40px 0;
+  }
+
+  .galeria img {
+    width: 180px;
+    height: auto;
+    border-radius: px;
+  }
+</style>
+
+
+
+<!-- Primeira linha de imagens -->
+<div class="galeria">
+  <a href="https://wa.me/553195580740" target="_blank" class="btn"></a><target="_blank" rel="noopener"><img src="d.jpeg" alt="Imagem 1" style="width: 300px; height: 200px; object-fit: cover;"></a>
+ <a href="https://instagram.com/alexandrecarvalho_fotografo" target="_blank" rel="noopener noreferrer"><target="_blank" rel="noopener"> <img src="aline.jpeg" alt="Imagem 2" style="width: 300px; height: 200px; object-fit: cover;"> </A>
+ <a href="https://instagram.com/alexandrecarvalho_fotografo" target="_blank" rel="noopener noreferrer"><target="_blank" rel="noopener"> <img src="ale.jpeg" alt="Imagem 3" style="width: 300px; height: 200px; object-fit: cover;"></a>
+  <a href="https://www.instagram.com/na_mochilla?igsh=MTBobWVtZXF6NG4wdg==" target="_blank" rel="noopener noreferrer"><target="_blank" rel="noopener"><img src="mochila.jpeg" alt="Imagem 4" style="width: 300px; height: 200px; object-fit: cover;"></a>
+ <a href="https://www.instagram.com/coonexa_?igsh=MWQweTY5emY0Z295cA==" target="_blank" rel="noopener noreferrer"><target="_blank" rel="noopener"><img src="abc.jpeg" alt="Imagem 5" style="width: 300px; height: 200px; object-fit: cover;"></a>
+ <a href="https://instagram.com/alexandrecarvalho_fotografo" target="_blank" rel="noopener noreferrer"><target="_blank" rel="noopener"><img src="novae.jpeg" alt="Imagem 5" style="width: 300px; height: 200px; object-fit: cover;"></a>
+</div>
+
+<!-- Segunda linha de imagens -->
+
+ <a href="https://instagram.com/alexandrecarvalho_fotografo" target="_blank" rel="noopener noreferrer"><target="_blank" rel="noopener"><img src="loja.jpg" alt="Imagem 6" style="width: 300px; height: 200px; object-fit: cover;"></a>
+ <a href="https://instagram.com/alexandrecarvalho_fotografo" target="_blank" rel="noopener noreferrer"><target="_blank" rel="noopener"><img src="jardim.png" alt="Imagem 7" style="width: 300px; height: 200px; object-fit: cover;"></a>
+<a href="https://instagram.com/alexandrecarvalho_fotografo" target="_blank" rel="noopener noreferrer"><target="_blank" rel="noopener"> <img src="alt.png" alt="Imagem 8" style="width: 300px; height: 200px; object-fit: cover;"></a>
+<a href="https://instagram.com/alexandrecarvalho_fotografo" target="_blank" rel="noopener noreferrer"><target="_blank" rel="noopener"><img src="grafica.jpg" alt="Imagem 9" style="width: 300px; height: 200px; object-fit: cover;"></a>
+<a href="https://instagram.com/alexandrecarvalho_fotografo" target="_blank" rel="noopener noreferrer"><target="_blank" rel="noopener"> <img src="onibus.jpg" alt="Imagem 10" style="width: 300px; height: 200px; object-fit: cover;"></a>
+<a href="https://instagram.com/alexandrecarvalho_fotografo" target="_blank" rel="noopener noreferrer"><target="_blank" rel="noopener"><img src="casa.jpeg" alt="Imagem 5" style="width: 300px; height: 200px; object-fit: cover;"></a>
+</div>
+<div style="text-align: center; margin-top: 50px;">
+  <div style="display: inline-block; background-color:  #0000cd; border: 2px solid #003366; padding: 20px 80px; border-radius: 10px; min-width: 1500px;">
+    <h2 style="color: #f0f8ff; font-size: 38px; font-weight: bold; margin: 10;">Produtos e Serviços</h2>
+  </div>
+<!-- Segunda linha de imagens -->
+
+
+   <div class="galeria">
+     <div style="display: inline-block; background-color:  #e6f0ff; border: 2px solid #003366; padding: 20px 80px; border-radius: 30px; min-width: 100px;">
+    <h2 style="color: #1c1c1c; font-size: 28px; font-weight: bold; margin: 5;">Construção & Reforma</h2></div>
+  <a href="https://wa.me/553195580740" target="_blank" class="btn"></a><target="_blank" rel="noopener"><img src="EMPRESA.jpeg" alt="Imagem 1" style="width: 300px; height: 200px; object-fit: cover;"></a>
+ <a href="https://instagram.com/alexandrecarvalho_fotografo" target="_blank" rel="noopener noreferrer"><target="_blank" rel="noopener"> <img src="AQUI.PNG" alt="Imagem 2" style="width: 300px; height: 200px; object-fit: cover;"> </A>
+ <a href="https://instagram.com/alexandrecarvalho_fotografo" target="_blank" rel="noopener noreferrer"><target="_blank" rel="noopener"> <img src="ALMA.jpg" alt="Imagem 3" style="width: 300px; height: 200px; object-fit: cover;"></a>
+  <a href="https://www.instagram.com/na_mochilla?igsh=MTBobWVtZXF6NG4wdg==" target="_blank" rel="noopener noreferrer"><target="_blank" rel="noopener"><img src="EMPRESA.jpeg" alt="Imagem 4" style="width: 300px; height: 200px; object-fit: cover;"></a>
+ <a href="https://www.instagram.com/coonexa_?igsh=MWQweTY5emY0Z295cA==" target="_blank" rel="noopener noreferrer"><target="_blank" rel="noopener"><img src="sua.jpeg" alt="Imagem 5" style="width: 300px; height: 200px; object-fit: cover;"></a>
+ <!-- Segunda linha de imagens -->
+ <div class="galeria">
+      <div style="display: inline-block; background-color: #e6f0ff; border: 2px solid #003366; padding: 20px 80px; border-radius: 30px; min-width: 100px;">
+    <h2 style="color: #; font-size: 28px; font-weight: bold; margin: 5;"> Beleza  & estética </h2></div>
+  <a href="https://wa.me/553195580740" target="_blank" class="btn"></a><target="_blank" rel="noopener"><img src="EMPRESA.jpeg" alt="Imagem 1" style="width: 300px; height: 200px; object-fit: cover;"></a>
+ <a href="https://instagram.com/alexandrecarvalho_fotografo" target="_blank" rel="noopener noreferrer"><target="_blank" rel="noopener"> <img src="AQUI.PNG" alt="Imagem 2" style="width: 300px; height: 200px; object-fit: cover;"> </A>
+ <a href="https://instagram.com/alexandrecarvalho_fotografo" target="_blank" rel="noopener noreferrer"><target="_blank" rel="noopener"> <img src="ALMA.jpg" alt="Imagem 3" style="width: 300px; height: 200px; object-fit: cover;"></a>
+  <a href="https://www.instagram.com/na_mochilla?igsh=MTBobWVtZXF6NG4wdg==" target="_blank" rel="noopener noreferrer"><target="_blank" rel="noopener"><img src="EMPRESA.jpeg" alt="Imagem 4" style="width: 300px; height: 200px; object-fit: cover;"></a>
+ <a href="https://www.instagram.com/coonexa_?igsh=MWQweTY5emY0Z295cA==" target="_blank" rel="noopener noreferrer"><target="_blank" rel="noopener"><img src="EMPRESA.jpeg" alt="Imagem 5" style="width: 300px; height: 200px; object-fit: cover;"></a>
+       
+	   
+	    <div class="galeria">
+      <div style="display: inline-block; background-color: #e6f0ff; border: 2px solid #003366; padding: 20px 80px; border-radius: 30px; min-width: 100px;">
+    <h2 style="color: #; font-size: 28px; font-weight: bold; margin: 5;"> Moda & Acessórios</h2></div>
+  <a href="https://wa.me/553195580740" target="_blank" class="btn"></a><target="_blank" rel="noopener"><img src="EMPRESA.jpeg" alt="Imagem 1" style="width: 300px; height: 200px; object-fit: cover;"></a>
+ <a href="https://instagram.com/alexandrecarvalho_fotografo" target="_blank" rel="noopener noreferrer"><target="_blank" rel="noopener"> <img src="AQUI.PNG" alt="Imagem 2" style="width: 300px; height: 200px; object-fit: cover;"> </A>
+ <a href="https://instagram.com/alexandrecarvalho_fotografo" target="_blank" rel="noopener noreferrer"><target="_blank" rel="noopener"> <img src="ALMA.jpg" alt="Imagem 3" style="width: 300px; height: 200px; object-fit: cover;"></a>
+  <a href="https://www.instagram.com/na_mochilla?igsh=MTBobWVtZXF6NG4wdg==" target="_blank" rel="noopener noreferrer"><target="_blank" rel="noopener"><img src="EMPRESA.jpeg" alt="Imagem 4" style="width: 300px; height: 200px; object-fit: cover;"></a>
+ <a href="https://www.instagram.com/coonexa_?igsh=MWQweTY5emY0Z295cA==" target="_blank" rel="noopener noreferrer"><target="_blank" rel="noopener"><img src="EMPRESA.jpeg" alt="Imagem 5" style="width: 300px; height: 200px; object-fit: cover;"></a>
+
+ <!-- Seção informativa sobre a plataforma -->
+<h2 style="text-align: center; font-size: 28px; color: #003366; margin-top: 40px;">
+  O que você encontra na plataforma
+</h2>
+
+ <!-- Seção Quadros -->
+<section style="width: 90%; margin: 40px auto;">
+
+  <!-- Linha com 5 quadros menores -->
+  <div style="display: flex; justify-content: space-between; gap: 15px; flex-wrap: nowrap;">
+    <div style="flex: 1; background: #d0e7ff; padding: 20px; border-radius: 8px; text-align: center; font-weight: 600;">
+      Cadastro Fácil
+    </div>
+    <div style="flex: 1; background: #b8d9ff; padding: 20px; border-radius: 8px; text-align: center; font-weight: 600;">
+      Agendamentos Online
+    </div>
+    <div style="flex: 1; background: #d0e7ff; padding: 20px; border-radius: 8px; text-align: center; font-weight: 600;">
+      Encontre Clientes
+    </div>
+    <div style="flex: 1; background: #b8d9ff; padding: 20px; border-radius: 8px; text-align: center; font-weight: 600;">
+      Suporte 24/7
+    </div>
+    <div style="flex: 1; background: #d0e7ff; padding: 20px; border-radius: 8px; text-align: center; font-weight: 600;">
+      Anuncie Fácil
+    </div>
+  </div>
+
+  <!-- Linha com 2 quadros maiores -->
+  <div style="display: flex; justify-content: center; gap: 20px; margin-top: 30px; flex-wrap: nowrap;">
+ <div style="flex: 2; background: #99c2ff; padding: 30px; border-radius: 10px; text-align: center; font-weight: 700; font-size: 1.2rem;">
+      Aumente a visibilidade da sua empresa e conquiste mais clientes.
+    </div>
+    <div style="flex: 2; background: #7fb8ff; padding: 30px; border-radius: 10px; text-align: center; font-weight: 700; font-size: 1.2rem;">
+      Plataforma completa para facilitar seus serviços e produtos em um só lugar.
+    </div>
+  </div>
+
+ 
+</a>
+<div style="text-align: center; margin: 20px 0;">
+  <img src="topo.png" alt="Logo" style="width: 200px; height: auto;">
+</div>
+	
+<!-- Rodapé -->
+<footer style="background-color: #003366; color: white; text-align: center; padding: 15px 0; width= position: relative; left: 0; bottom: 0;">
+  conectando você ao futuro dos serviços, simples e eficiente.
+</footer>
+ <a href="index.html" class="btn-voltar">Voltar ao Início</a>
+
+</footer>
+</footer>
+</footer>
+
+</footer>
+</body>
