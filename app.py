@@ -6,6 +6,7 @@ import os
 app = Flask(__name__)
 app.secret_key = os.urandom(24)
 
+
 def init_db():
     conn = sqlite3.connect('usuarios.db')
     cursor = conn.cursor()
@@ -23,16 +24,21 @@ def init_db():
     conn.commit()
     conn.close()
 
+
 def get_db_connection():
     conn = sqlite3.connect('usuarios.db')
     conn.row_factory = sqlite3.Row
     return conn
 
+
 @app.route('/')
 def index():
     usuario = session.get('usuario')
     tipo_usuario = session.get('tipo')
-    return render_template('index.html', usuario=usuario, tipo_usuario=tipo_usuario)
+    return render_template('index.html',
+                           usuario=usuario,
+                           tipo_usuario=tipo_usuario)
+
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -48,7 +54,8 @@ def login():
             erro = "Preencha todos os campos"
         else:
             conn = get_db_connection()
-            user = conn.execute('SELECT * FROM usuarios WHERE email = ?', (email,)).fetchone()
+            user = conn.execute('SELECT * FROM usuarios WHERE email = ?',
+                                (email, )).fetchone()
             conn.close()
 
             if user and check_password_hash(user['senha'], senha):
@@ -62,11 +69,13 @@ def login():
 
     return render_template('login.html', erro=erro)
 
+
 @app.route('/logout')
 def logout():
     session.clear()
     flash('Você foi desconectado com sucesso.', 'info')
     return redirect(url_for('index'))
+
 
 @app.route('/cadastrousuario', methods=['GET', 'POST'])
 def cadastrousuario():
@@ -87,16 +96,19 @@ def cadastrousuario():
                 conn = get_db_connection()
                 conn.execute(
                     'INSERT INTO usuarios (nome, email, telefone, senha, tipo) VALUES (?, ?, ?, ?, ?)',
-                    (nome, email, telefone, generate_password_hash(senha), 'usuario')
-                )
+                    (nome, email, telefone, generate_password_hash(senha),
+                     'usuario'))
                 conn.commit()
                 conn.close()
-                flash('Cadastro realizado com sucesso! Faça login para continuar.', 'success')
+                flash(
+                    'Cadastro realizado com sucesso! Faça login para continuar.',
+                    'success')
                 return redirect(url_for('login'))
             except sqlite3.IntegrityError:
                 erro = 'Este e-mail já está cadastrado.'
 
     return render_template('cadastrousuario.html', erro=erro)
+
 
 @app.route('/cadastroprestador', methods=['GET', 'POST'])
 def cadastroprestador():
@@ -107,23 +119,31 @@ def cadastroprestador():
 
     return render_template('cadastroprestador.html')
 
+
 @app.route('/contato')
 def contato():
     usuario = session.get('usuario')
     tipo_usuario = session.get('tipo')
-    return render_template('contato.html', usuario=usuario, tipo_usuario=tipo_usuario)
+    return render_template('CONTATO.HTML',
+                           usuario=usuario,
+                           tipo_usuario=tipo_usuario)
+
 
 @app.route('/quemsomosx')
 def quemsomosx():
     usuario = session.get('usuario')
     tipo_usuario = session.get('tipo')
-    return render_template('quemsomosx.html', usuario=usuario, tipo_usuario=tipo_usuario)
+    return render_template('quemsomosx.html',
+                           usuario=usuario,
+                           tipo_usuario=tipo_usuario)
+
 
 @app.route('/sucesso')
 def sucesso():
     usuario = session.get('usuario')
     return render_template('sucesso.html', usuario=usuario)
 
+
 if __name__ == '__main__':
     init_db()
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=3000, debug=True)
