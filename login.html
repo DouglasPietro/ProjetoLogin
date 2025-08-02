@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login - coNexa</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef6fc;
+      padding: 20px;
+    }
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .logo {
+      display: block;
+      margin: 0 auto 20px;
+      max-width: 100px;
+    }
+    input, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+    a {
+      display: block;
+      margin-top: 15px;
+      text-align: center;
+      color: #004a99;
+      text-decoration: none;
+    }
+    .erro {
+      color: red;
+      text-align: center;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="{{ url_for('static', filename='imagens/TOPO.png') }}" class="logo" alt="Logo coNexa" />
+    <h2>Login</h2>
+
+    <!-- Formulário de login integrado com Flask -->
+    <form method="POST">
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="password" name="senha" placeholder="Senha" required />
+      <button type="submit">Entrar</button>
+    </form>
+
+    <!-- Exibe erro, se existir -->
+    {% if erro %}
+      <p class="erro">{{ erro }}</p>
+    {% endif %}
+
+    <a href="{{ url_for('index') }}">← Voltar ao Início</a>
+  </div>
+</body>
+</html>
