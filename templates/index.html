@@ -186,19 +186,10 @@
 <body>
 
   <header>
-    {% if usuario %}
-    <div style="position: absolute; top: 15px; right: 20px; display: flex; gap: 10px; align-items: center;">
-      <span
-        style="background-color: #ffc107; color: #003366; padding: 8px 15px; border-radius: 20px; font-weight: bold;">
-        👤 {{ usuario }}
-      </span>
-      <a href="{{ url_for('logout') }}"
-        style="color: white; background: #d9534f; padding: 6px 12px; border-radius: 8px; text-decoration: none; font-size: 14px;">Sair</a>
-    </div>
-    {% endif %}
-    <h1>c<span class="o">o</span>Nexa</h1>
-    <p>Bem-vindo ao futuro dos serviços — a plataforma que conecta você às melhores oportunidades</p>
-  </header>
+  <img src="{{ url_for('static', filename='imagens/conexa_novo.jpeg') }}" 
+       alt="coNexa" 
+       style="height: 80px; object-fit: contain;">
+</header>
 
   <div style="text-align: center; margin: 20px 0;">
     <label for="citySelect"><strong>Selecione sua cidade:</strong></label>
