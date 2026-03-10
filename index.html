@@ -185,23 +185,14 @@
 
 <body>
 
-  <header>
+  <header style="background-color: #005f99; padding: 15px 20px; display: flex; align-items: center; gap: 20px;">
   <img src="{{ url_for('static', filename='imagens/conexa_novo.jpeg') }}" 
        alt="coNexa" 
-       style="height: 80px; object-fit: contain;">
+       style="height: 70px; width: auto; object-fit: contain;">
+  <p style="color: white; font-size: 18px; font-weight: bold; margin: 0;">
+    Bem-vindo ao futuro dos serviços — a plataforma que conecta você às melhores oportunidades
+  </p>
 </header>
-
-  <div style="text-align: center; margin: 20px 0;">
-    <label for="citySelect"><strong>Selecione sua cidade:</strong></label>
-    <select id="citySelect" onchange="redirectToCity()" style="padding: 8px; font-size: 16px;">
-      <option value=>
-        <href="INDEX.html">NOVA ERA
-      </option>
-      <option value="prata.html">São Domingos do Prata</option>
-      <option value="dias.html">Antônio Dias</option>
-      <option value="belavista.html">Bela Vista de Minas</option>
-    </select>
-  </div>
 
   <script>
     function redirectToCity() {
@@ -275,18 +266,7 @@
 
     <body>
 
-      <div class="btn-container">
-        <a href="{{ url_for('quemsomosx') }}" class="btn btn-quem-somos">Quem Somos</a>
-        <a href="{{ url_for('login') }}" class="btn btn-login">Login</a>
-        <a href="{{ url_for('contato') }}" class="btn btn-contato">Contato</a>
-        <a href="{{ url_for('cadastrousuario') }}" class="btn btn-cadastro-usuario">Cadastro Usuario</a>
-        <a href="{{ url_for('cadastroprestador') }}" class="btn btn-cadastro-prestador">Cadastro Prestador</a>
-        <a href="https://www.instagram.com/coonexa_?igsh=MWQweTY5emY0Z295cA==" target="_blank"
-          class="btn btn-instagram">Instagram</a>
-
-
-      </div>
-
+    
     </body>
 
     </html>
